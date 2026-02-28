@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Mohini Borate | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohini Borate | Portfolio</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+<div id="particles-js"></div>
 
 <header>
     <nav>
         <h2 class="logo">Mohini Borate</h2>
+
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#education">Education</a></li>
@@ -18,27 +22,30 @@
             <li><a href="#achievements">Achievements</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+
+        <div class="theme-selector">
+            <select id="theme-select">
+                <option value="light">☀ Light</option>
+                <option value="dark">🌙 Dark</option>
+                <option value="tech">💻 Tech Blue</option>
+            </select>
+        </div>
     </nav>
 </header>
 
-<section id="home" class="home">
+<section id="home">
     <div class="home-content">
-        <h1>Hello, I'm <span>Mohini Borate</span></h1>
-        <h3>Registered Pharmacist & B.Sc Computer Science Student</h3>
-        <p>
-            I am a Registered Pharmacist currently pursuing B.Sc Computer Science.
-            I aim to integrate healthcare knowledge with modern technology to build
-            innovative and impactful solutions.
-        </p>
-        <a href="#contact" class="btn">Contact Me</a>
+        <h1>Hello, I'm Mohini Borate</h1>
+        <h3>I am a <span class="typing"></span></h3>
+        <p>Registered Pharmacist & B.Sc Computer Science Student integrating healthcare and technology.</p>
     </div>
 
     <div class="home-image">
-        <img src="c:\Users\Admin\Desktop\mohini\inshot\.trashed-1754957209-InShot_20250712_224349735.jpg" alt="Mohini Photo">
+        <img src="profile.jpg" alt="Mohini">
     </div>
 </section>
 
-<section id="education">
+<section id="education" class="reveal">
     <h2 class="section-title">Education</h2>
 
     <div class="card">
@@ -48,64 +55,83 @@
 
     <div class="card">
         <h3>B.Sc Computer Science</h3>
-        <p> Mudhoji College, Phaltan</p>
+        <p>IT Mudhoji College, Phaltan</p>
     </div>
 </section>
 
-<section id="skills">
+<section id="skills" class="reveal">
     <h2 class="section-title">Skills</h2>
 
-    <div class="skills-container">
-        <div class="card">
-            <h3>Pharmacy Skills</h3>
-            <ul>
-                <li>Medication Dispensing</li>
-                <li>Patient Counseling</li>
-                <li>Inventory Management</li>
-            </ul>
+    <div class="skill-box">
+        <h3>💊 Pharmacy Skills</h3>
+
+        <div class="skill-bar">
+            <span>Medication Dispensing</span>
+            <div class="progress"><div style="width:95%"></div></div>
         </div>
 
-        <div class="card">
-            <h3>IT Skills</h3>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>Git & GitHub</li>
-            </ul>
+        <div class="skill-bar">
+            <span>Patient Counseling</span>
+            <div class="progress"><div style="width:90%"></div></div>
+        </div>
+    </div>
+
+    <div class="skill-box">
+        <h3>💻 IT Skills</h3>
+
+        <div class="skill-bar">
+            <span>HTML</span>
+            <div class="progress"><div style="width:90%"></div></div>
+        </div>
+
+        <div class="skill-bar">
+            <span>CSS</span>
+            <div class="progress"><div style="width:85%"></div></div>
+        </div>
+
+        <div class="skill-bar">
+            <span>JavaScript</span>
+            <div class="progress"><div style="width:75%"></div></div>
         </div>
     </div>
 </section>
 
-<section id="achievements">
+<section id="achievements" class="reveal">
     <h2 class="section-title">Achievements</h2>
 
-    <div class="card">
+    <div class="achievement-box">
+        <h3>💊 Pharmacy</h3>
         <ul>
-            <li>Participated in E-Poster & E-Essay Competitions (Pharmacy)</li>
-            <li>Attended International seminar on HISTORY OF PHARMACOGNOSY</li>
-            <li>Prize Winner in Drawing, Rangoli & Food Festival</li>
-            <li>Won Poster Presentation on BLOCKCHAIN TECHNOLOGY (2 Times)</li>
-            <li>Participated in Various Technical Competitions</li>
+            <li>Poster & Essay Competitions</li>
+            <li>Attended Pharmacy Seminars</li>
+        </ul>
+    </div>
+
+    <div class="achievement-box">
+        <h3>💻 BCS</h3>
+        <ul>
+            <li>Blockchain Poster Winner (2 Times)</li>
+            <li>Drawing, Rangoli & Food Festival Winner</li>
         </ul>
     </div>
 </section>
 
-<section id="contact">
+<section id="contact" class="reveal">
     <h2 class="section-title">Contact</h2>
-
     <div class="card">
-        <p>Email: <a href="mail:mohineeborate@gmail.com">mohineeborate@gmail.com</a></p>
+        <p>Email: mohineeborate@gmail.com</p>
         <p>Location: Phaltan</p>
-        <p>LinkedIn: Drx.Mohini Borate</p>
         <p>GitHub: mohineeborate-collab</p>
+        <p>LinkedIn: Drx.Mohini Borate</p>
     </div>
 </section>
 
 <footer>
-    <p>© 2026 Mohini Borate | All Rights Reserved</p>
+    © 2026 Mohini Borate
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 <script src="script.js"></script>
+
 </body>
 </html>

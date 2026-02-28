@@ -1,20 +1,71 @@
-// Simple fade-in animation on scroll
-window.addEventListener("scroll", function() {
-    const cards = document.querySelectorAll(".card");
+/* THEME SWITCH */
+const themeSelect=document.getElementById("theme-select");
 
-    cards.forEach(card => {
-        const cardTop = card.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
+function applyTheme(theme){
+document.body.classList.remove("dark","tech");
+if(theme!=="light"){
+document.body.classList.add(theme);
+}
+localStorage.setItem("theme",theme);
+}
 
-        if(cardTop < windowHeight - 50){
-            card.style.opacity = "1";
-            card.style.transform = "translateY(0)";
-        }
-    });
+themeSelect.addEventListener("change",()=>{
+applyTheme(themeSelect.value);
 });
 
-document.querySelectorAll(".card").forEach(card => {
-    card.style.opacity = "0";
-    card.style.transform = "translateY(50px)";
-    card.style.transition = "all 0.6s ease";
+const savedTheme=localStorage.getItem("theme")||"light";
+themeSelect.value=savedTheme;
+applyTheme(savedTheme);
+
+/* TYPING EFFECT */
+const textArray=[
+"Registered Pharmacist 💊",
+"B.Sc Computer Science Student 💻",
+"Tech + Healthcare Enthusiast 🚀"
+];
+
+let typing=document.querySelector(".typing");
+let textIndex=0,charIndex=0;
+
+function type(){
+if(charIndex<textArray[textIndex].length){
+typing.textContent+=textArray[textIndex][charIndex];
+charIndex++;
+setTimeout(type,80);
+}else{
+setTimeout(erase,1500);
+}
+}
+
+function erase(){
+if(charIndex>0){
+typing.textContent=textArray[textIndex].substring(0,charIndex-1);
+charIndex--;
+setTimeout(erase,50);
+}else{
+textIndex=(textIndex+1)%textArray.length;
+setTimeout(type,500);
+}
+}
+
+type();
+
+/* SCROLL REVEAL */
+function reveal(){
+document.querySelectorAll(".reveal").forEach(el=>{
+if(el.getBoundingClientRect().top<window.innerHeight-100){
+el.classList.add("active");
+}
+});
+}
+window.addEventListener("scroll",reveal);
+
+/* PARTICLES */
+particlesJS("particles-js",{
+particles:{
+number:{value:80},
+size:{value:3},
+move:{speed:2},
+line_linked:{enable:true}
+}
 });
