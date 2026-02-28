@@ -78,7 +78,7 @@ section *{
 
 /* Home Section */
 #home{
-    background-image:url("bg1.jpg");
+    background-image:url("https://share.google/HtRXvwvyZBFxq0LG2");
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -116,19 +116,19 @@ section *{
 
 /* Other Sections */
 #education{
-    background-image:url("bg2.jpg");
+    background-image:url("https://share.google/HtRXvwvyZBFxq0LG2");
 }
 
 #skills{
-    background-image:url("bg3.jpg");
+    background-image:url("https://share.google/G88KiJYhyOpffvCtC");
 }
 
 #achievements{
-    background-image:url("bg2.jpg");
+    background-image:url("https://share.google/dkki5nY7AAfG1qIWW");
 }
 
 #contact{
-    background-image:url("bg3.jpg");
+    background-image:url("https://share.google/G88KiJYhyOpffvCtC");
 }
 
 /* Cards */
