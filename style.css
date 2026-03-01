@@ -109,19 +109,16 @@ box-shadow:0 0 40px var(--glow);
 }
 
 /* PROFILE GLOW */
-.home{
-display:flex;
-justify-content:space-between;
-align-items:center;
-flex-wrap:wrap;
-}
+
 
 .home-image img{
-width:280px;
-border-radius:50%;
-border:4px solid var(--glow);
-box-shadow:0 0 30px var(--glow);
-animation:pulse 2s infinite alternate;
+    width:320px;
+    height:420px;
+    object-fit:cover;
+    border-radius:50% / 40%;
+    border:4px solid var(--glow);
+    box-shadow:0 0 40px var(--glow);
+    animation:pulse 2s infinite alternate;
 }
 
 @keyframes pulse{
@@ -166,10 +163,25 @@ padding:20px;
 /* ===== CLICKABLE NAVIGATION & SECTION FIX ===== */
 
 /* Prevent section hiding behind fixed navbar */
-section {
-    scroll-margin-top: 110px;
+/* HOME SECTION LAYOUT */
+#home{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    min-height:100vh;
+    padding:120px 80px;
+    gap:50px;
 }
 
+.home-content{
+    flex:1;
+}
+
+.home-image{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
 /* Navbar links styling */
 nav a {
     text-decoration: none;
@@ -261,4 +273,14 @@ nav a.active {
 .achievement-box:hover {
   transform: translateY(-8px) scale(1.02);
   box-shadow: 0 0 35px var(--glow);
+}
+@media(max-width:900px){
+    #home{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .home-image{
+        order:-1;
+    }
 }
