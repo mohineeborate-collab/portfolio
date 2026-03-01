@@ -160,3 +160,49 @@ footer{
 text-align:center;
 padding:20px;
 }
+/* ===== CLICKABLE NAVIGATION & SECTION FIX ===== */
+
+/* Prevent section hiding behind fixed navbar */
+section {
+    scroll-margin-top: 110px;
+}
+
+/* Navbar links styling */
+nav a {
+    text-decoration: none;
+    color: var(--text);
+    padding: 8px 18px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    position: relative;
+    font-weight: 500;
+}
+
+/* Hover glow effect */
+nav a:hover {
+    background: var(--glass);
+    box-shadow: 0 0 15px var(--glow);
+    transform: translateY(-2px);
+}
+
+/* Active section highlight */
+nav a.active {
+    background: var(--glass);
+    box-shadow: 0 0 20px var(--glow);
+}
+
+/* Make cards visually interactive */
+.card,
+.skill-box,
+.achievement-box {
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+/* Card hover animation */
+.card:hover,
+.skill-box:hover,
+.achievement-box:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 0 40px var(--glow);
+}
