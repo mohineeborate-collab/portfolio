@@ -17,6 +17,7 @@ body{
 background:var(--bg);
 color:var(--text);
 transition:0.5s;
+padding-top:80px;
 }
 
 /* THEMES */
@@ -44,14 +45,16 @@ z-index:-1;
 
 /* NAVBAR */
 header{
-background:var(--glass);
-backdrop-filter:blur(10px);
-box-shadow:0 0 20px var(--glow);
-padding:15px 50px;
-position:fixed;
-width:100%;
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px var(--glow);
+    padding: 15px 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
-
 nav{
 display:flex;
 justify-content:space-between;
@@ -78,11 +81,11 @@ box-shadow:0 0 10px var(--glow);
 }
 
 /* SECTIONS */
-section{
+ssection{
 min-height:100vh;
 padding:120px 50px;
+scroll-margin-top:100px;
 }
-
 .section-title{
 text-align:center;
 margin-bottom:30px;
